@@ -1,0 +1,29 @@
+# Release binaries are uploaded through GitHub Releases only.
+*.exe
+*.zip
+*.rar
+
+# Local state, logs, and temporary files.
+*.ini
+*.progress
+*.log
+*.tmp
+*.temp
+Thumbs.db
+Desktop.ini
+
+# Source and build files must never enter this download-only repository.
+src/
+work/
+build/
+out/
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.cs
+*.csproj
+*.sln
+*.pdb
+
