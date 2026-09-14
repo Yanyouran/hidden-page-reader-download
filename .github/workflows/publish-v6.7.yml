@@ -1,0 +1,24 @@
+name: Publish Hidden Page Reader v6.7
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create public release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create v6.7
+          release-assets/Hidden-Page-Reader-v6.7-Windows-x64.zip
+          --title "隐页阅读器 v6.7"
+          --notes "Windows x64 免安装版。新增秘密快捷键隐私锁、正文无操作隐藏、自动锁定，以及 TXT 自动章节目录和跳转。"
+          --verify-tag
