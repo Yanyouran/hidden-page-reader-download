@@ -2,6 +2,8 @@ name: Publish Hidden Page Reader v6.6
 
 on:
   push:
+    branches:
+      - main
     tags:
       - v6.6
 
